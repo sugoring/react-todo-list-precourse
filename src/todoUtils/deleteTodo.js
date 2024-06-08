@@ -1,5 +1,4 @@
-// 할 일 삭제 함수
-
+// 할 일을 삭제하는 함수
 const deleteTodo = (todos, index) => {
   return todos.filter((_, idx) => idx !== index);
 };

@@ -1,5 +1,4 @@
-// 유효성 검사 함수
-
+// 할 일 유효성 검사 함수
 const validateTodo = (todo) => {
   return todo.trim() !== "";
 };
