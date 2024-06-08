@@ -1,5 +1,6 @@
 // src/main.jsx
 import React from "react";
+import TodoForm from "./TodoForm.jsx";
 
 const Main = () => {
   return (
@@ -7,10 +8,7 @@ const Main = () => {
       <h1>할 일 목록</h1>
 
       {/* 할 일 입력 폼 */}
-      <form>
-        <input type="text" placeholder="할 일을 입력하세요" />
-        <button type="submit">추가</button>
-      </form>
+      <TodoForm />
 
       {/* 할 일 목록 표시 */}
       <ul>
