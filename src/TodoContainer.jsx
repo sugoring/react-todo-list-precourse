@@ -1,24 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import TodoForm from "./TodoForm";
 import TodoList from "./TodoList";
-import addTodo from "./todoUtils/addTodo";
-import toggleComplete from "./todoUtils/toggleComplete";
-import deleteTodo from "./todoUtils/deleteTodo";
+import useTodos from "./hooks/useTodos";
 
 const TodoContainer = () => {
-  const [todos, setTodos] = useState([]);
-
-  const handleAddTodo = (todo) => {
-    setTodos((prevTodos) => addTodo(prevTodos, todo));
-  };
-
-  const handleToggleComplete = (index) => {
-    setTodos((prevTodos) => toggleComplete(prevTodos, index));
-  };
-
-  const handleDeleteTodo = (index) => {
-    setTodos((prevTodos) => deleteTodo(prevTodos, index));
-  };
+  const { todos, handleAddTodo, handleToggleComplete, handleDeleteTodo } =
+    useTodos();
 
   return (
     <div>
