@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import handleInputChange from "./todoUtils/handleInputChange";
-import handleSubmit from "./todoUtils/handleSubmit";
+import handleInputChange from "../todoUtils/handleInputChange";
+import handleSubmit from "../todoUtils/handleSubmit";
+
 
 const TodoForm = ({ addTodo }) => {
   const [inputValue, setInputValue] = useState("");
