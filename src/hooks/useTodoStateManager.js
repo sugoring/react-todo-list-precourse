@@ -1,13 +1,13 @@
-import useTodosState from "./useTodosState";
-import useFilteredTodos from "./useFilteredTodos";
+import useFilteredTodosState from "./useFilteredTodosState";
 
+// 필터링된 할 일 목록과 관련된 상태와 함수를 제공하는 훅
 const useTodoStateManager = () => {
-  const { todos, setTodos, filter, setFilter } = useTodosState();
-  const filteredTodos = useFilteredTodos(todos, filter);
+  const { todos, allTodos, setTodos, filter, setFilter } =
+    useFilteredTodosState();
 
   return {
-    todos: filteredTodos,
-    allTodos: todos,
+    todos,
+    allTodos,
     setTodos,
     filter,
     setFilter,
