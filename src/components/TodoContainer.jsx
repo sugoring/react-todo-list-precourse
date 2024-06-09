@@ -1,7 +1,7 @@
 import React from "react";
 import TodoForm from "./TodoForm";
 import TodoList from "./TodoList";
-import useTodos from "./hooks/useTodos";
+import useTodos from "../hooks/useTodos";
 
 const TodoContainer = () => {
   const {
