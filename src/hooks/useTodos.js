@@ -1,21 +1,16 @@
-import { useState } from "react";
-import FILTERS from "../todoUtils/filters";
+import useTodosState from "./useTodosState";
+import useFilteredTodos from "./useFilteredTodos";
 import {
   handleAddTodo,
   handleToggleComplete,
   handleDeleteTodo,
   handleSetFilter,
 } from "../todoUtils/todoHandlers";
+import FILTERS from "../todoUtils/filters";
 
 const useTodos = () => {
-  const [todos, setTodos] = useState([]);
-  const [filter, setFilter] = useState(FILTERS.ALL);
-
-  const filteredTodos = todos.filter((todo) => {
-    if (filter === FILTERS.ACTIVE) return !todo.completed;
-    if (filter === FILTERS.COMPLETED) return todo.completed;
-    return true;
-  });
+  const { todos, setTodos, filter, setFilter } = useTodosState();
+  const filteredTodos = useFilteredTodos(todos, filter);
 
   return {
     todos: filteredTodos,
