@@ -15,6 +15,7 @@ const useTodos = () => {
 
   return {
     todos: filteredTodos,
+    allTodos: todos,
     handleAddTodo: (todo) => handleAddTodo(todos, setTodos, todo),
     handleToggleComplete: (index) =>
       handleToggleComplete(todos, setTodos, index),

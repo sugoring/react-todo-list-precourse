@@ -8,6 +8,7 @@ import useTodos from "../../hooks/useTodos";
 const TodoApp = () => {
   const {
     todos,
+    allTodos,
     handleAddTodo,
     handleToggleComplete,
     handleDeleteTodo,
@@ -29,7 +30,7 @@ const TodoApp = () => {
         toggleComplete={handleToggleComplete}
         deleteTodo={handleDeleteTodo}
       />
-      <TodoStats todos={todos} />
+      <TodoStats todos={todos} allTodos={allTodos} filter={filter} />
     </div>
   );
 };
