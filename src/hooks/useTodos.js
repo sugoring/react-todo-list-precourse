@@ -1,6 +1,7 @@
-import { useEffect } from "react";
 import useTodoStateManager from "./useTodoStateManager";
 import useTodoHandlers from "./useTodoHandlers";
+import useLoadTodos from "./useLoadTodos";
+import useSaveTodos from "./useSaveTodos";
 import FILTERS from "../todoUtils/filters";
 
 // 모든 상태와 핸들러를 결합하는 훅
@@ -9,20 +10,8 @@ const useTodos = () => {
     useTodoStateManager();
   const handlers = useTodoHandlers(allTodos, setTodos, setFilter);
 
-  useEffect(() => {
-    const storedTodos = JSON.parse(localStorage.getItem("todos")) || [];
-    setTodos(storedTodos);
-    const storedFilter = localStorage.getItem("filter") || FILTERS.ALL;
-    setFilter(storedFilter);
-  }, [setTodos, setFilter]);
-
-  useEffect(() => {
-    localStorage.setItem("todos", JSON.stringify(allTodos));
-  }, [allTodos]);
-
-  useEffect(() => {
-    localStorage.setItem("filter", filter);
-  }, [filter]);
+  useLoadTodos(setTodos, setFilter);
+  useSaveTodos(allTodos, filter);
 
   return {
     todos,
