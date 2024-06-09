@@ -1,26 +1,28 @@
 import React from "react";
+import FilterButton from "./FilterButton";
+import FILTERS from "./filters";
 
-const TodoFilter = ({ filter, FILTERS, handleSetFilter }) => {
+const TodoFilter = ({ filter, handleSetFilter }) => {
   return (
     <div>
-      <button
+      <FilterButton
+        isActive={filter === FILTERS.ALL}
         onClick={() => handleSetFilter(FILTERS.ALL)}
-        className={filter === FILTERS.ALL ? "active" : ""}
       >
         전체
-      </button>
-      <button
+      </FilterButton>
+      <FilterButton
+        isActive={filter === FILTERS.ACTIVE}
         onClick={() => handleSetFilter(FILTERS.ACTIVE)}
-        className={filter === FILTERS.ACTIVE ? "active" : ""}
       >
         진행 중
-      </button>
-      <button
+      </FilterButton>
+      <FilterButton
+        isActive={filter === FILTERS.COMPLETED}
         onClick={() => handleSetFilter(FILTERS.COMPLETED)}
-        className={filter === FILTERS.COMPLETED ? "active" : ""}
       >
         완료
-      </button>
+      </FilterButton>
     </div>
   );
 };
