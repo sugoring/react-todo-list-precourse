@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import handleInputChange from "../../todoHandlers/handleInputChange";
+import TodoInput from "./TodoInput";
 import handleSubmit from "../../todoHandlers/handleSubmit";
 
 const TodoForm = ({ addTodo }) => {
@@ -7,12 +7,7 @@ const TodoForm = ({ addTodo }) => {
 
   return (
     <form onSubmit={(e) => handleSubmit(e, inputValue, addTodo, setInputValue)}>
-      <input
-        type="text"
-        placeholder="할 일을 입력하세요"
-        value={inputValue}
-        onChange={(e) => handleInputChange(e, setInputValue)}
-      />
+      <TodoInput inputValue={inputValue} setInputValue={setInputValue} />
       <button type="submit">추가</button>
     </form>
   );
