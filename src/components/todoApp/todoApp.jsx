@@ -5,6 +5,7 @@ import TodoFilter from "../todoFilter/todoFilter";
 import TodoStats from "./todoStats";
 import useTodos from "../../hooks/todos/useTodos";
 
+// 할 일 앱 컴포넌트: 할 일 입력 폼, 할 일 필터, 할 일 목록, 할 일 통계를 표시하는 앱
 const TodoApp = () => {
   const {
     todos,

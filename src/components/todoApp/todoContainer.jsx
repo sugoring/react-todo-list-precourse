@@ -1,6 +1,7 @@
 import React from "react";
 import TodoApp from "./todoApp";
 
+// 할 일 컨테이너 컴포넌트: 할 일 목록을 표시하고 추가하는 기능을 제공하는 컨테이너
 const TodoContainer = () => {
   return (
     <div>
