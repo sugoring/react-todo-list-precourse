@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import FILTERS from "../todoUtils/filters";
 
+// 필터를 적용하여 할 일 목록을 반환하는 훅
 const useFilteredTodos = (todos, filter) => {
   const filteredTodos = useMemo(() => {
     switch (filter) {
