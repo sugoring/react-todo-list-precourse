@@ -1,6 +1,6 @@
+// 필터링된 할 일 목록과 관련된 상태와 함수를 제공하는 훅
 import useFilteredTodosState from "./useFilteredTodosState";
 
-// 필터링된 할 일 목록과 관련된 상태와 함수를 제공하는 훅
 const useTodoStateManager = () => {
   const { todos, allTodos, setTodos, filter, setFilter } =
     useFilteredTodosState();

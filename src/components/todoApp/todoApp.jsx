@@ -3,7 +3,7 @@ import TodoForm from "../todoForm/todoForm";
 import TodoList from "../todoList/todoList";
 import TodoFilter from "../todoFilter/todoFilter";
 import TodoStats from "./todoStats";
-import useTodos from "../../hooks/useTodos";
+import useTodos from "../../hooks/todos/useTodos";
 
 const TodoApp = () => {
   const {
