@@ -12,11 +12,17 @@ const useTodos = () => {
   useEffect(() => {
     const storedTodos = JSON.parse(localStorage.getItem("todos")) || [];
     setTodos(storedTodos);
-  }, [setTodos]);
+    const storedFilter = localStorage.getItem("filter") || FILTERS.ALL;
+    setFilter(storedFilter);
+  }, [setTodos, setFilter]);
 
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(allTodos));
   }, [allTodos]);
+
+  useEffect(() => {
+    localStorage.setItem("filter", filter);
+  }, [filter]);
 
   return {
     todos,
