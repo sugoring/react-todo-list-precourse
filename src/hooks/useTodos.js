@@ -5,7 +5,8 @@ import {
   handleToggleComplete,
   handleDeleteTodo,
   handleSetFilter,
-} from "../todoUtils/todoHandlers";
+} from "../todoHandlers/index";
+
 import FILTERS from "../todoUtils/filters";
 
 const useTodos = () => {
