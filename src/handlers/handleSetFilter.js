@@ -1,6 +1,6 @@
-// 필터 설정을 처리하는 함수
-const handleSetFilter = (setFilter, filter) => {
+// 필터를 설정하는 함수
+const setFilterHandler = (setFilter, filter) => {
   setFilter(filter);
 };
 
-export default handleSetFilter;
+export default setFilterHandler;
