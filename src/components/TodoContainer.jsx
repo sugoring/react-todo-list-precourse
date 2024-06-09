@@ -16,6 +16,8 @@ const TodoContainer = () => {
   } = useTodos();
 
   const totalTodos = todos.length;
+  const completedTodos = todos.filter((todo) => todo.completed).length;
+  const activeTodos = totalTodos - completedTodos;
 
   return (
     <div>
@@ -30,7 +32,10 @@ const TodoContainer = () => {
         toggleComplete={handleToggleComplete}
         deleteTodo={handleDeleteTodo}
       />
-      <div>총 할 일 개수: {totalTodos}</div>
+      <div>
+        총 할 일 개수: {totalTodos} | 완료된 할 일: {completedTodos} | 진행 중인
+        할 일: {activeTodos}
+      </div>
     </div>
   );
 };
