@@ -1,14 +1,12 @@
-import validateTodo from "../todoUtils/validateTodo";
+import preventDefault from "../todoUtils/preventDefault";
+import validateInputValue from "../todoUtils/validateInputValue";
+import addAndResetTodo from "../todoUtils/addAndResetTodo";
 
-// 폼 제출을 처리하는 함수
 const handleSubmit = (e, inputValue, addTodo, setInputValue) => {
-  e.preventDefault();
-  if (!validateTodo(inputValue)) {
-    alert("할 일을 입력하세요.");
-    return;
+  preventDefault(e);
+  if (validateInputValue(inputValue)) {
+    addAndResetTodo(inputValue, addTodo, setInputValue);
   }
-  addTodo(inputValue);
-  setInputValue("");
 };
 
 export default handleSubmit;
