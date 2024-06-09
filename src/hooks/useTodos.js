@@ -1,12 +1,12 @@
 import useTodosState from "./useTodosState";
 import useFilteredTodos from "./useFilteredTodos";
-import FILTERS from "../todoUtils/filters";
 import {
   handleAddTodo,
   handleToggleComplete,
   handleDeleteTodo,
   handleSetFilter,
 } from "../todoUtils/todoHandlers";
+import FILTERS from "../todoUtils/filters";
 
 const useTodos = () => {
   const { todos, setTodos, filter, setFilter } = useTodosState();
@@ -14,10 +14,11 @@ const useTodos = () => {
 
   return {
     todos: filteredTodos,
-    addTodo: (todo) => handleAddTodo(todos, setTodos, todo),
-    toggleComplete: (index) => handleToggleComplete(todos, setTodos, index),
-    deleteTodo: (index) => handleDeleteTodo(todos, setTodos, index),
-    setFilter: (filter) => handleSetFilter(setFilter, filter),
+    handleAddTodo: (todo) => handleAddTodo(todos, setTodos, todo),
+    handleToggleComplete: (index) =>
+      handleToggleComplete(todos, setTodos, index),
+    handleDeleteTodo: (index) => handleDeleteTodo(todos, setTodos, index),
+    handleSetFilter: (filter) => handleSetFilter(setFilter, filter),
     filter,
     FILTERS,
   };
