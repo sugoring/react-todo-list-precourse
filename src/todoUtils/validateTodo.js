@@ -1,6 +1,4 @@
 // 할 일 유효성 검사 함수
-const validateTodo = (todo) => {
-  return todo.trim() !== "";
-};
+const validateTodo = (todo) => todo.trim() !== "";
 
 export default validateTodo;

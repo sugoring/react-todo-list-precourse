@@ -1,11 +1,14 @@
+// 할 일 목록을 필터링하는 함수
 import FILTERS from "./filters";
+import activeFilter from "./activeFilter";
+import completedFilter from "./completedFilter";
 
 const filterTodos = (todos, filter) => {
   switch (filter) {
     case FILTERS.ACTIVE:
-      return todos.filter((todo) => !todo.completed);
+      return activeFilter(todos);
     case FILTERS.COMPLETED:
-      return todos.filter((todo) => todo.completed);
+      return completedFilter(todos);
     default:
       return todos;
   }
