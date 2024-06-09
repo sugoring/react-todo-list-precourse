@@ -1,9 +1,9 @@
 import React from "react";
-import TodoForm from "./TodoForm";
-import TodoList from "./TodoList";
-import TodoFilter from "./TodoFilter";
+import TodoForm from "../TodoForm/TodoForm";
+import TodoList from "../TodoList/TodoList";
+import TodoFilter from "../TodoFilter/TodoFilter";
 import TodoStats from "./TodoStats";
-import useTodos from "../hooks/useTodos";
+import useTodos from "../../hooks/useTodos";
 
 const TodoApp = () => {
   const {

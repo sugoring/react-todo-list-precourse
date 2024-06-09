@@ -1,6 +1,6 @@
-// 폼 제출 핸들러 함수
-import validateTodo from "./validateTodo";
+import validateTodo from "../todoUtils/validateTodo";
 
+// 폼 제출을 처리하는 함수
 const handleSubmit = (e, inputValue, addTodo, setInputValue) => {
   e.preventDefault();
   if (!validateTodo(inputValue)) {
