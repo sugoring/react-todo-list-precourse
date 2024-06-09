@@ -1,7 +1,7 @@
 import React from "react";
-import AllFilterButton from "./allFilterButton";
-import ActiveFilterButton from "./activeFilterButton";
-import CompletedFilterButton from "./completedFilterButton";
+import AllFilterButton from "./buttons/allFilterButton";
+import ActiveFilterButton from "./buttons/activeFilterButton";
+import CompletedFilterButton from "./buttons/completedFilterButton";
 
 const TodoFilter = ({ filter, handleSetFilter }) => {
   return (

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import FILTERS from "../todoUtils/filters";
+import FILTERS from "../utils/filters";
 
 // 필터 상태를 관리하는 훅
 const useFilterState = () => {

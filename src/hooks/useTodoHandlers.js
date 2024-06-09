@@ -3,7 +3,7 @@ import {
   handleToggleComplete,
   handleDeleteTodo,
   handleSetFilter,
-} from "../todoHandlers";
+} from "../handlers";
 
 const useTodoHandlers = (todos, setTodos, setFilter) => {
   return {

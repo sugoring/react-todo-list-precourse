@@ -1,6 +1,6 @@
-import preventDefault from "../todoUtils/preventDefault";
-import validateInputValue from "../todoUtils/validateInputValue";
-import addAndResetTodo from "../todoUtils/addAndResetTodo";
+import preventDefault from "../utils/preventDefault";
+import validateInputValue from "../utils/validateInputValue";
+import addAndResetTodo from "../utils/addAndResetTodo";
 
 const handleSubmit = (e, inputValue, addTodo, setInputValue) => {
   preventDefault(e);

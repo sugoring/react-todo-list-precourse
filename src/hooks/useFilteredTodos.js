@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import filterTodos from "../todoUtils/filterTodos";
+import filterTodos from "../utils/filterTodos";
 
 // 필터를 적용하여 할 일 목록을 반환하는 훅
 const useFilteredTodos = (todos, filter) => {

@@ -1,7 +1,7 @@
 import React from "react";
-import TotalTodos from "./todoStats/totalTodos";
-import CompletedTodos from "./todoStats/completedTodos";
-import ActiveTodos from "./todoStats/activeTodos";
+import TotalTodos from "./stats/totalTodos";
+import CompletedTodos from "./stats/completedTodos";
+import ActiveTodos from "./stats/activeTodos";
 
 const TodoStats = ({ todos, allTodos }) => {
   const totalTodos = allTodos.length;

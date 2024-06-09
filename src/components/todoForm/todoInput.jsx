@@ -1,5 +1,5 @@
 import React from "react";
-import handleInputChange from "../../todoHandlers/handleInputChange";
+import handleInputChange from "../../handlers/handleInputChange";
 
 const TodoInput = ({ inputValue, setInputValue }) => {
   return (

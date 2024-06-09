@@ -2,7 +2,7 @@ import useTodoStateManager from "./useTodoStateManager";
 import useTodoHandlers from "./useTodoHandlers";
 import useLoadTodos from "./useLoadTodos";
 import useSaveTodos from "./useSaveTodos";
-import FILTERS from "../todoUtils/filters";
+import FILTERS from "../utils/filters";
 
 // 모든 상태와 핸들러를 결합하는 훅
 const useTodos = () => {

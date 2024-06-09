@@ -1,7 +1,7 @@
 import React from "react";
 import TodoText from "./todoText";
-import ToggleCompleteButton from "./toggleCompleteButton";
-import DeleteButton from "./deleteButton";
+import ToggleCompleteButton from "./buttons/toggleCompleteButton";
+import DeleteButton from "./buttons/deleteButton";
 
 const TodoItem = ({ todo, index, toggleComplete, deleteTodo }) => {
   return (

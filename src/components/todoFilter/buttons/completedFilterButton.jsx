@@ -1,6 +1,6 @@
 import React from "react";
-import FilterButton from "./filterButton";
-import FILTERS from "../../todoUtils/filters";
+import FilterButton from "../filterButton";
+import FILTERS from "../../../utils/filters";
 
 const CompletedFilterButton = ({ filter, handleSetFilter }) => {
   return (

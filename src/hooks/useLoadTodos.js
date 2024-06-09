@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import FILTERS from "../todoUtils/filters";
+import FILTERS from "../utils/filters";
 
 const useLoadTodos = (setTodos, setFilter) => {
   useEffect(() => {
