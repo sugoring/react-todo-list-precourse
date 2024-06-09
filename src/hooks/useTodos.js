@@ -14,6 +14,10 @@ const useTodos = () => {
     setTodos(storedTodos);
   }, [setTodos]);
 
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(allTodos));
+  }, [allTodos]);
+
   return {
     todos,
     allTodos,
