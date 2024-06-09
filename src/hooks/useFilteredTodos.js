@@ -2,13 +2,18 @@ import { useMemo } from "react";
 import FILTERS from "../todoUtils/filters";
 
 const useFilteredTodos = (todos, filter) => {
-  return useMemo(() => {
-    return todos.filter((todo) => {
-      if (filter === FILTERS.ACTIVE) return !todo.completed;
-      if (filter === FILTERS.COMPLETED) return todo.completed;
-      return true;
-    });
+  const filteredTodos = useMemo(() => {
+    switch (filter) {
+      case FILTERS.ACTIVE:
+        return todos.filter((todo) => !todo.completed);
+      case FILTERS.COMPLETED:
+        return todos.filter((todo) => todo.completed);
+      default:
+        return todos;
+    }
   }, [todos, filter]);
+
+  return filteredTodos;
 };
 
 export default useFilteredTodos;
