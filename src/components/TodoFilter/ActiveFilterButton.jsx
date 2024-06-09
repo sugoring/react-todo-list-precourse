@@ -1,0 +1,16 @@
+import React from "react";
+import FilterButton from "./FilterButton";
+import FILTERS from "../../todoUtils/filters";
+
+const ActiveFilterButton = ({ filter, handleSetFilter }) => {
+  return (
+    <FilterButton
+      isActive={filter === FILTERS.ACTIVE}
+      onClick={() => handleSetFilter(FILTERS.ACTIVE)}
+    >
+      진행 중
+    </FilterButton>
+  );
+};
+
+export default ActiveFilterButton;
