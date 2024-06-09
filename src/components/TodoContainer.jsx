@@ -15,6 +15,8 @@ const TodoContainer = () => {
     FILTERS,
   } = useTodos();
 
+  const totalTodos = todos.length;
+
   return (
     <div>
       <TodoForm addTodo={handleAddTodo} />
@@ -28,6 +30,7 @@ const TodoContainer = () => {
         toggleComplete={handleToggleComplete}
         deleteTodo={handleDeleteTodo}
       />
+      <div>총 할 일 개수: {totalTodos}</div>
     </div>
   );
 };
