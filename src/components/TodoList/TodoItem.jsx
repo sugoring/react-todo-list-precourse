@@ -1,13 +1,17 @@
 import React from "react";
+import TodoText from "./TodoText";
+import ToggleCompleteButton from "./ToggleCompleteButton";
+import DeleteButton from "./DeleteButton";
 
 const TodoItem = ({ todo, index, toggleComplete, deleteTodo }) => {
   return (
-    <li style={{ textDecoration: todo.completed ? "line-through" : "none" }}>
-      {todo.text}
-      <button onClick={() => toggleComplete(index)}>
-        {todo.completed ? "미완료" : "완료"}
-      </button>
-      <button onClick={() => deleteTodo(index)}>삭제</button>
+    <li>
+      <TodoText text={todo.text} completed={todo.completed} />
+      <ToggleCompleteButton
+        completed={todo.completed}
+        onToggle={() => toggleComplete(index)}
+      />
+      <DeleteButton onDelete={() => deleteTodo(index)} />
     </li>
   );
 };
