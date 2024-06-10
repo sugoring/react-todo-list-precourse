@@ -1,0 +1,23 @@
+.todo-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  
+  .add-button {
+    padding: 15px 25px;
+    font-size: 16px;
+    border: none;
+    background-color: #b83f45;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .add-button:hover {
+    background-color: #a7323d;
+  }
+  

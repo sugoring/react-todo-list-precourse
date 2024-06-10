@@ -1,13 +1,15 @@
+// src/components/todoForm/todoInput.jsx
 import React from "react";
-import handleInputChange from "../../handlers/handleInputChange";
+import "./todoInput.css";
 
 const TodoInput = ({ inputValue, setInputValue }) => {
   return (
     <input
       type="text"
-      placeholder="할 일을 입력하세요"
       value={inputValue}
-      onChange={(e) => handleInputChange(e, setInputValue)}
+      onChange={(e) => setInputValue(e.target.value)}
+      placeholder="What needs to be done?"
+      className="todo-input"
     />
   );
 };
