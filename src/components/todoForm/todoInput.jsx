@@ -1,6 +1,5 @@
-// 할 일 입력 컴포넌트: 사용자가 할 일을 입력하는 입력 필드
 import React from "react";
-import setInputValueHandler from "../../handlers/setInputValueHandler";
+import handleInputChange from "../../handlers/handleInputChange";
 
 const TodoInput = ({ inputValue, setInputValue }) => {
   return (
@@ -8,7 +7,7 @@ const TodoInput = ({ inputValue, setInputValue }) => {
       type="text"
       placeholder="할 일을 입력하세요"
       value={inputValue}
-      onChange={(e) => setInputValueHandler(e, setInputValue)}
+      onChange={(e) => handleInputChange(e, setInputValue)}
     />
   );
 };
