@@ -1,0 +1,88 @@
+/* src/components/todoApp/todoApp.css */
+.todo-app {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 25px 50px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 550px;
+  }
+  
+  .todo-app form {
+    margin-bottom: 20px;
+  }
+  
+  .todo-app input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .todo-app button {
+    background-color: #b83f45;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .todo-app button:hover {
+    background-color: #a7323d;
+  }
+  
+  .todo-app ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .todo-app li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .todo-app li:last-child {
+    border-bottom: none;
+  }
+  
+  .todo-app .completed {
+    text-decoration: line-through;
+    color: #999;
+  }
+  
+  .todo-app .filters {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .todo-app .filters button {
+    background-color: #f5f5f5;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .todo-app .filters button.active {
+    background-color: #b83f45;
+    color: #fff;
+  }
+  
+  .todo-app .filters button:hover {
+    background-color: #e4e4e4;
+  }
+  
+  .todo-app .stats {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+  }
+  
