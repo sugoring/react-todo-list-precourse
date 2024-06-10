@@ -1,0 +1,23 @@
+.todo-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.todo-container h1 {
+  font-size: 80px;
+  margin-bottom: 20px;
+  color: #b83f45;
+  font-weight: 300;
+}
+
+.todo-container p {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.todo-container .footer {
+  margin-top: 30px;
+  font-size: 13px;
+  color: #999;
+}
