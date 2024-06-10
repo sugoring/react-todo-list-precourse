@@ -1,6 +1,5 @@
 // src/components/todoForm/todoInput.jsx
 import React from "react";
-import "./todoInput.css";
 
 const TodoInput = ({ inputValue, setInputValue }) => {
   return (

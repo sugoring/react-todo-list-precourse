@@ -1,10 +1,10 @@
 import React from "react";
 import TodoItem from "./todoItem";
+import "./todoList.css";
 
-// 할 일 목록 컴포넌트: 할 일 아이템을 표시하는 목록
 const TodoList = ({ todos, toggleComplete, deleteTodo }) => {
   return (
-    <ul>
+    <ul className="todo-list">
       {todos.map((todo, index) => (
         <TodoItem
           key={index}

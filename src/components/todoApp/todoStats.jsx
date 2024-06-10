@@ -10,10 +10,16 @@ const TodoStats = ({ todos, allTodos }) => {
   const activeTodos = totalTodos - completedTodos;
 
   return (
-    <div>
-      <TotalTodos total={totalTodos} /> |{" "}
-      <CompletedTodos completed={completedTodos} /> |{" "}
-      <ActiveTodos active={activeTodos} />
+    <div className="todo-stats">
+      <div className="stat">
+        <TotalTodos total={totalTodos} />
+      </div>
+      <div className="stat">
+        <CompletedTodos completed={completedTodos} />
+      </div>
+      <div className="stat">
+        <ActiveTodos active={activeTodos} />
+      </div>
     </div>
   );
 };

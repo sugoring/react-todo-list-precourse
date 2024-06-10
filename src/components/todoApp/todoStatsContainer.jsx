@@ -5,8 +5,11 @@ import TodoStats from "./todoStats";
 const TodoStatsContainer = ({ useTodos }) => {
   const { todos, allTodos, filter } = useTodos();
 
-  return <TodoStats todos={todos} allTodos={allTodos} filter={filter} />;
+  return (
+    <div className="todo-stats-container">
+      <TodoStats todos={todos} allTodos={allTodos} filter={filter} />
+    </div>
+  );
 };
 
 export default TodoStatsContainer;
-s;
