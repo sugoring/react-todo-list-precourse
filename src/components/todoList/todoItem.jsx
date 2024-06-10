@@ -7,11 +7,11 @@ import DeleteButton from "./buttons/deleteButton";
 const TodoItem = ({ todo, index, toggleComplete, deleteTodo }) => {
   return (
     <li>
-      <TodoText text={todo.text} completed={todo.completed} />
       <ToggleCompleteButton
         completed={todo.completed}
         onToggle={() => toggleComplete(index)}
       />
+      <TodoText text={todo.text} completed={todo.completed} />
       <DeleteButton onDelete={() => deleteTodo(index)} />
     </li>
   );
